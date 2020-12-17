@@ -1,8 +1,10 @@
-package com.example.comics_app.ui.category;
+package com.example.comics_app.ui.category.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.example.comics_app.ui.category.TabFragment;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
 
