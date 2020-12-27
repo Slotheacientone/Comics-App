@@ -33,11 +33,12 @@ public class RecycleViewChapterAdapter extends RecyclerView.Adapter<RecycleViewC
 
     @Override
     public void onBindViewHolder(@NonNull RecycleViewChapterHolder holder, int position) {
-        holder.textView.setText("Chapter " + position);
+        int chapter = position + 1;
+        holder.textView.setText("Chapter " + chapter);
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println(position+1);
+                System.out.println(chapter);
             }
         });
     }
