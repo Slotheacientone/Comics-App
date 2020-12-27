@@ -1,6 +1,7 @@
 package com.example.comics_app.ui.category.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.comics_app.R;
 import com.example.comics_app.model.Comic;
+import com.example.comics_app.ui.info.ComicInfoPage;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -45,7 +47,9 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Click on: " + position);
+                Intent intent = new Intent(context, ComicInfoPage.class);
+                intent.putExtra("comic", comicList.get(position));
+                context.startActivity(intent);
             }
         });
 

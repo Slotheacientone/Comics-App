@@ -1,6 +1,8 @@
 package com.example.comics_app.model;
 
-public class Comic {
+import java.io.Serializable;
+
+public class Comic implements Serializable {
     private String title;
     private String description;
     private String category;
