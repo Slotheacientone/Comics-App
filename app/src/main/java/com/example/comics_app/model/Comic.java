@@ -17,6 +17,12 @@ public class Comic implements Serializable {
         this.numberOfChapters = numberOfChapters;
     }
 
+    public Comic(String title, String thumbnail) {
+        this.title = title;
+        this.thumbnail = thumbnail;
+    }
+
+
     public String getTitle() {
         return title;
     }
