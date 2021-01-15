@@ -17,6 +17,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
+
 public class ComicAdapter extends RecyclerView.Adapter<ComicAdapter.MyViewHolder> {
     private Context context;
     private List<Comic> items;
@@ -36,7 +38,7 @@ public class ComicAdapter extends RecyclerView.Adapter<ComicAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.title.setText(items.get(position).getTitle());
-        Picasso.get().load(items.get(position).getThumbnail()).into(holder.imgView);
+        Picasso.get().load(items.get(position).getThumbnail()).transform(new RoundedCornersTransformation(10, 0)).into(holder.imgView);
 
     }
 

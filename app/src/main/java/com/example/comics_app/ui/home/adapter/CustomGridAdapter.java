@@ -14,6 +14,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
+
 public class CustomGridAdapter extends BaseAdapter {
     private List<Comic> items;
     private Context context;
@@ -55,7 +57,7 @@ public class CustomGridAdapter extends BaseAdapter {
 
         Comic comic = items.get(position);
         holder.title.setText(comic.getTitle());
-        Picasso.get().load(comic.getThumbnail()).into(holder.thumbnail);
+        Picasso.get().load(comic.getThumbnail()).transform(new RoundedCornersTransformation(10, 0)).into(holder.thumbnail);
 
         return convertView;
     }

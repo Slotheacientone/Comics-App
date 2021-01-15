@@ -31,7 +31,7 @@
             android:id="@+id/daily_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_home_black_24dp"
+            android:src="@drawable/ic_today_24px"
             app:layout_constraintBottom_toBottomOf="@+id/ranking_icon"
             app:layout_constraintEnd_toStartOf="@+id/rating_icon"
             app:layout_constraintHorizontal_bias="0.5"
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:src="@drawable/ic_account_circle_24px"
+            android:src="@drawable/ic_leaderboard_24px"
             app:layout_constraintEnd_toStartOf="@+id/daily_icon"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
             android:id="@+id/rating_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_notifications_black_24dp"
+            android:src="@drawable/ic_star_rate_24px"
             app:layout_constraintBottom_toBottomOf="@+id/ranking_icon"
             app:layout_constraintEnd_toStartOf="@+id/gift_icon"
             app:layout_constraintHorizontal_bias="0.5"
@@ -64,7 +64,7 @@
             android:id="@+id/gift_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_category_24px"
+            android:src="@drawable/ic_redeem_24px"
             app:layout_constraintBottom_toBottomOf="@+id/ranking_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -164,6 +164,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView5" />
 
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_search_24px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ss.com.bannerslider.Slider
             android:id="@+id/banner_slider"
             android:layout_width="match_parent"
@@ -176,17 +186,6 @@
             app:slider_loopSlides="true">
 
         </ss.com.bannerslider.Slider>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:clickable="true"
-            android:src="@android:drawable/ic_menu_search"
-            app:layout_constraintEnd_toEndOf="@+id/banner_slider"
-            app:layout_constraintTop_toTopOf="@+id/banner_slider" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/Rv_BigUpdate"

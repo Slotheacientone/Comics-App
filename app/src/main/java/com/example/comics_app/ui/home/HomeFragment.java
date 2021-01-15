@@ -18,6 +18,7 @@ import com.example.comics_app.ui.home.adapter.BannerSliderAdapter;
 import com.example.comics_app.ui.home.adapter.ComicAdapter;
 import com.example.comics_app.ui.home.adapter.CustomGridAdapter;
 import com.example.comics_app.util.PicassoImageLoadingService;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,7 @@ public class HomeFragment extends Fragment {
     private Slider slider;
     private RecyclerView bigUpdate;
     private GridView gridView;
+    /*private FloatingActionButton floatingActionButton;*/
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -41,6 +43,8 @@ public class HomeFragment extends Fragment {
         slider = root.findViewById(R.id.banner_slider);
         bigUpdate = root.findViewById(R.id.Rv_BigUpdate);
         gridView = root.findViewById(R.id.top_comic);
+      /*  floatingActionButton = root.findViewById(R.id.floatingActionButton);
+        floatingActionButton.setAlpha(0.25f);*/
 
 
         //banner slider
