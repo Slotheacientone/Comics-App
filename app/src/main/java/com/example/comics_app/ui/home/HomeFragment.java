@@ -17,6 +17,7 @@ import com.example.comics_app.ui.home.adapter.BannerSliderAdapter;
 import com.example.comics_app.ui.home.adapter.RecycleComicAdapter;
 import com.example.comics_app.ui.home.adapter.RecyclerViewAdapter;
 import com.example.comics_app.util.PicassoImageLoadingService;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;

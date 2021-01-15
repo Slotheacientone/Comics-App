@@ -44,9 +44,6 @@ public class ChapterFragment extends Fragment {
         recyclerView.setAdapter(recycleViewChapterAdapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
-        /*DividerItemDecoration divider = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
-        divider.setDrawable(Objects.requireNonNull(ContextCompat.getDrawable(this.requireContext(), R.drawable.divider)));
-        recyclerView.addItemDecoration(divider);*/
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this.requireContext(), linearLayoutManager.getOrientation());
         dividerItemDecoration.setDrawable(Objects.requireNonNull(ResourcesCompat.getDrawable(getResources(), R.drawable.divider, requireContext().getTheme())));
         recyclerView.addItemDecoration(dividerItemDecoration);
