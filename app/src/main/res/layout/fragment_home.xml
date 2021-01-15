@@ -12,20 +12,28 @@
         android:layout_height="match_parent">
 
 
-        <GridView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/random_comic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/top_comic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:horizontalSpacing="8dp"
-            android:numColumns="3"
-            android:scrollbars="vertical"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 
         <ImageView
             android:id="@+id/daily_icon"
@@ -218,6 +226,16 @@
             android:text="Có thể bạn sẽ thích"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Rv_BigUpdate" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Truyện ngẫu nhiên"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_comic" />
         <!--    app:slider_emptyView="@layout/layout_empty_view"-->
 
 
