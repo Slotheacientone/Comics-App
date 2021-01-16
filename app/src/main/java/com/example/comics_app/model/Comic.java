@@ -17,6 +17,13 @@ public class Comic implements Serializable {
         this.numberOfChapters = numberOfChapters;
     }
 
+    public Comic(String title, String description, String category, String thumbnail) {
+        this.title = title;
+        this.description = description;
+        this.category = category;
+        this.thumbnail = thumbnail;
+    }
+
     public Comic(String title, String thumbnail) {
         this.title = title;
         this.thumbnail = thumbnail;
@@ -41,5 +48,25 @@ public class Comic implements Serializable {
 
     public int getNumberOfChapters() {
         return numberOfChapters;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
+
+    public void setNumberOfChapters(int numberOfChapters) {
+        this.numberOfChapters = numberOfChapters;
     }
 }
