@@ -17,7 +17,6 @@ import java.util.List;
 public class ProfileFragment extends Fragment {
 
 
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 

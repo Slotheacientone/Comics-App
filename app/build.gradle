@@ -43,4 +43,8 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.8'
     implementation 'jp.wasabeef:picasso-transformations:2.4.0'
     implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+    implementation 'br.com.simplepass:loading-button-android:1.14.0'
+    implementation 'com.android.support:design:30.0.0'
+
+
 }
