@@ -11,7 +11,6 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.comics_app.R;
-import com.example.comics_app.ui.category.adapter.RecycleViewAdapter;
 
 public class RecycleViewChapterAdapter extends RecyclerView.Adapter<RecycleViewChapterAdapter.RecycleViewChapterHolder> {
 
@@ -55,7 +54,7 @@ public class RecycleViewChapterAdapter extends RecyclerView.Adapter<RecycleViewC
 
         public RecycleViewChapterHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.chapter_title);
+            textView = itemView.findViewById(R.id.img_view);
             cardView = itemView.findViewById(R.id.chapter_card_view);
         }
 

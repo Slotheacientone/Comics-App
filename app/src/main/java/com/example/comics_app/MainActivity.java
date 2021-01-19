@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 //        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
-        
+
+//        SharedPrefs.getInstance().clear();
 
         String token = SharedPrefs.getInstance().get("token", String.class);
         if (token == null)

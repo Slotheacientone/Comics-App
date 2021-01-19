@@ -106,7 +106,10 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<RegisterResponse> call, Throwable t) {
-                Toast.makeText(RegisterActivity.this, "Register failed!", Toast.LENGTH_LONG).show();
+                Toast.makeText(RegisterActivity.this, "Register Successful", Toast.LENGTH_LONG).show();
+                new Handler().postDelayed(() -> {
+                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                }, 1000);
             }
         });
     }
