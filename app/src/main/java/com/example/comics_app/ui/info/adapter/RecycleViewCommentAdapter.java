@@ -8,17 +8,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.comics_app.R;
 import com.example.comics_app.model.Comment;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jp.wasabeef.picasso.transformations.CropCircleTransformation;
-import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 public class RecycleViewCommentAdapter extends RecyclerView.Adapter<RecycleViewCommentAdapter.RecycleViewCommentHolder> {
 
@@ -62,7 +61,7 @@ public class RecycleViewCommentAdapter extends RecyclerView.Adapter<RecycleViewC
         public RecycleViewCommentHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.comment_name);
-            avatar = itemView.findViewById(R.id.comment_avatar);
+            avatar = itemView.findViewById(R.id.comment_item_avatar);
             comment = itemView.findViewById(R.id.comment);
             date = itemView.findViewById(R.id.comment_date);
         }

@@ -8,7 +8,7 @@
     app:cardElevation="0dp">
 
         <TextView
-            android:id="@+id/img_view"
+            android:id="@+id/chapter_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingVertical="10dp"

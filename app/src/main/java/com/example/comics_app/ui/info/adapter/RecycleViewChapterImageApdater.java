@@ -22,11 +22,9 @@ public class RecycleViewChapterImageApdater extends RecyclerView.Adapter<Recycle
     private List<String> url;
     Context context;
 
-    public RecycleViewChapterImageApdater(Context context) {
-        url = new ArrayList<>();
-        url.add("http://i.boxtruyen.net/data/images/17545/357579/001-fix.jpg");
-        url.add("http://i.boxtruyen.net/data/images/17545/357579/002-fix.jpg");
-        url.add("http://i.boxtruyen.net/data/images/17545/357579/003-fix.jpg");
+    public RecycleViewChapterImageApdater(Context context, List<String> url) {
+        this.context=context;
+        this.url=url;
     }
 
     @NonNull
@@ -39,7 +37,9 @@ public class RecycleViewChapterImageApdater extends RecyclerView.Adapter<Recycle
 
     @Override
     public void onBindViewHolder(@NonNull RecycleViewChapterImageHolder holder, int position) {
-        Picasso.get().load(url.get(position)).into(holder.img);
+        System.out.println("Size: " + url.size());
+        System.out.println(url.get(position));
+        Picasso.get().load(url.get(position)).fit().into(holder.img);
     }
 
     @Override
@@ -54,8 +54,7 @@ public class RecycleViewChapterImageApdater extends RecyclerView.Adapter<Recycle
 
         public RecycleViewChapterImageHolder(@NonNull View itemView) {
             super(itemView);
-            img = itemView.findViewById(R.id.img_view);
-
+            img = itemView.findViewById(R.id.img_view1);
         }
     }
 }

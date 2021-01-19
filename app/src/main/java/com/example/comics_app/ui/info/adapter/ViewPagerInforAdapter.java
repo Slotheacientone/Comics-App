@@ -24,9 +24,9 @@ public class ViewPagerInforAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
-                return new DescriptionFragment(comic.getDescription());
+                return new DescriptionFragment(comic.getDescription(),comic.getId());
             case 1:
-                return new ChapterFragment(comic.getNumberOfChapters());
+                return new ChapterFragment(comic.getId());
         }
         return null;
     }

@@ -42,7 +42,7 @@ public class CategoryFragment extends Fragment {
                     tab.setText("Hài hước");
                     break;
                 case 2:
-                    tab.setText("Kinh dị");
+                    tab.setText("Học đường");
                     break;
             }
         }).attach();

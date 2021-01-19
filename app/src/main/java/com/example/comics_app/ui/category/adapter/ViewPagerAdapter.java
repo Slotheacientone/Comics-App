@@ -18,7 +18,7 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
         switch (position){
             case 0: return new TabFragment("action");
             case 1: return new TabFragment("comedy");
-            case 2: return new TabFragment("horror");
+            case 2: return new TabFragment("school life");
         }
         return null;
     }
