@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.comics_app.ImageContent;
+import com.example.comics_app.LoginActivity;
 import com.example.comics_app.R;
 import com.example.comics_app.model.Chapter;
 import com.example.comics_app.ui.category.adapter.RecycleViewAdapter;
@@ -43,7 +45,7 @@ public class RecycleViewChapterAdapter extends RecyclerView.Adapter<RecycleViewC
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ChapterImageActivity.class);
+                Intent intent = new Intent(context, ImageContent.class);
                 context.startActivity(intent);
             }
         });

@@ -105,7 +105,7 @@ public class DescriptionFragment extends Fragment {
         String email = SharedPrefs.getInstance().get("email", String.class);
         String token = SharedPrefs.getInstance().get("token", String.class);
         RequestQueue requestQueue = Volley.newRequestQueue(this.getContext());
-        String url = "http://192.168.43.52:8080/api/profile/" + email;
+        String url = "http://192.168.1.22:8080/api/profile/" + email;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -136,7 +136,7 @@ public class DescriptionFragment extends Fragment {
         jsonObject.put("comment", comment);
         jsonObject.put("email", email);
         jsonObject.put("comic_id", comicId);
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "http://192.168.43.52:8080/api/comment", jsonObject, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "http://192.168.1.22:8080/api/comment", jsonObject, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 requestComment(adapter);
@@ -161,7 +161,7 @@ public class DescriptionFragment extends Fragment {
 
     private void requestComment(RecycleViewCommentAdapter adapter) {
         RequestQueue requestQueue = Volley.newRequestQueue(this.getContext());
-        String url = "http://192.168.43.52:8080/api/comment/1";
+        String url = "http://192.168.1.22:8080/api/comment/1";
         String token = SharedPrefs.getInstance().get("token", String.class);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override

@@ -69,7 +69,7 @@ public class TabFragment extends Fragment {
        // String email = SharedPrefs.getInstance().get("email", String.class);
         String token = SharedPrefs.getInstance().get("token", String.class);
         RequestQueue requestQueue = Volley.newRequestQueue(this.getContext());
-        String url = "http://192.168.43.52:8080/api/comic/" + title;
+        String url = "http://192.168.1.22:8080/api/comic/" + title;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

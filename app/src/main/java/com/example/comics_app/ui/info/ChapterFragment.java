@@ -74,7 +74,7 @@ public class ChapterFragment extends Fragment {
     public void requestProfileData(RecycleViewChapterAdapter recycleViewChapterAdapter) {
         //String email = SharedPrefs.getInstance().get("email", String.class);
         RequestQueue requestQueue = Volley.newRequestQueue(this.getContext());
-        String url = "http://192.168.43.52:8080/api/chapter/" + comicId;
+        String url = "http://192.168.1.22:8080/api/chapter/" + comicId;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
